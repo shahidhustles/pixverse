@@ -1,0 +1,310 @@
+/* Retro 3D / Sticker Shadow UI Styles */
+
+:root {
+  /* Dark Gaming Background */
+  --bg-primary: #0f1419;
+  --bg-secondary: #1a1f2e;
+  --bg-card: #ffffff;
+
+  /* Valorant-Inspired Gaming Colors */
+  --valorant-red: #ff4655;
+  --electric-blue: #00d4ff;
+  --neon-green: #00ff88;
+  --purple: #9d4edd;
+  --orange: #ff8500;
+  --yellow: #ffea00;
+
+  /* Shadow Colors */
+  --shadow-black: #000000;
+  --shadow-size: 8px;
+  --shadow-size-lg: 12px;
+  --shadow-size-sm: 4px;
+}
+
+/* Base Retro 3D Classes */
+.retro-3d-base {
+  border: 2px solid var(--shadow-black);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Standard 3D Shadow Effects */
+.retro-3d {
+  box-shadow: var(--shadow-size) var(--shadow-size) 0px var(--shadow-black);
+  border: 2px solid var(--shadow-black);
+}
+
+.retro-3d-sm {
+  box-shadow: var(--shadow-size-sm) var(--shadow-size-sm) 0px
+    var(--shadow-black);
+  border: 2px solid var(--shadow-black);
+}
+
+.retro-3d-lg {
+  box-shadow: var(--shadow-size-lg) var(--shadow-size-lg) 0px
+    var(--shadow-black);
+  border: 2px solid var(--shadow-black);
+}
+
+/* Colored 3D Shadow Variants */
+.retro-3d-red {
+  box-shadow: var(--shadow-size) var(--shadow-size) 0px var(--valorant-red);
+  border: 2px solid var(--valorant-red);
+}
+
+.retro-3d-blue {
+  box-shadow: var(--shadow-size) var(--shadow-size) 0px var(--electric-blue);
+  border: 2px solid var(--electric-blue);
+}
+
+.retro-3d-green {
+  box-shadow: var(--shadow-size) var(--shadow-size) 0px var(--neon-green);
+  border: 2px solid var(--neon-green);
+}
+
+.retro-3d-purple {
+  box-shadow: var(--shadow-size) var(--shadow-size) 0px var(--purple);
+  border: 2px solid var(--purple);
+}
+
+.retro-3d-orange {
+  box-shadow: var(--shadow-size) var(--shadow-size) 0px var(--orange);
+  border: 2px solid var(--orange);
+}
+
+.retro-3d-yellow {
+  box-shadow: var(--shadow-size) var(--shadow-size) 0px var(--yellow);
+  border: 2px solid var(--yellow);
+}
+
+/* Interactive 3D Elements */
+.retro-3d-interactive {
+  cursor: pointer;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.retro-3d-interactive:hover {
+  transform: translate(-2px, -2px);
+}
+
+.retro-3d-interactive:active {
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0px var(--shadow-black);
+}
+
+/* Hover Effects for Colored Variants */
+.retro-3d-interactive.retro-3d-red:hover {
+  box-shadow: 10px 10px 0px var(--valorant-red);
+}
+
+.retro-3d-interactive.retro-3d-blue:hover {
+  box-shadow: 10px 10px 0px var(--electric-blue);
+}
+
+.retro-3d-interactive.retro-3d-green:hover {
+  box-shadow: 10px 10px 0px var(--neon-green);
+}
+
+.retro-3d-interactive.retro-3d-purple:hover {
+  box-shadow: 10px 10px 0px var(--purple);
+}
+
+.retro-3d-interactive.retro-3d-orange:hover {
+  box-shadow: 10px 10px 0px var(--orange);
+}
+
+.retro-3d-interactive.retro-3d-yellow:hover {
+  box-shadow: 10px 10px 0px var(--yellow);
+}
+
+/* Gaming Background Classes */
+.gaming-bg-primary {
+  background: var(--bg-primary);
+}
+
+.gaming-bg-secondary {
+  background: var(--bg-secondary);
+}
+
+.gaming-bg-card {
+  background: var(--bg-card);
+}
+
+/* Gaming Gradient Backgrounds */
+.gaming-gradient-red {
+  background: linear-gradient(135deg, #ff4655, #ff6b7d);
+}
+
+.gaming-gradient-blue {
+  background: linear-gradient(135deg, #00d4ff, #0099cc);
+}
+
+.gaming-gradient-green {
+  background: linear-gradient(135deg, #00ff88, #00cc6a);
+}
+
+.gaming-gradient-purple {
+  background: linear-gradient(135deg, #9d4edd, #7b2cbf);
+}
+
+.gaming-gradient-orange {
+  background: linear-gradient(135deg, #ff8500, #ff9f40);
+}
+
+/* Typography Classes */
+.retro-text-3d {
+  text-shadow: 3px 3px 0px var(--shadow-black), 6px 6px 0px rgba(0, 0, 0, 0.3);
+  font-weight: 800;
+}
+
+.retro-text-gaming {
+  font-weight: 700;
+  background: linear-gradient(
+    45deg,
+    var(--valorant-red),
+    var(--electric-blue),
+    var(--neon-green)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button Styles */
+.retro-btn {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.retro-btn-primary {
+  background: var(--valorant-red);
+  color: white;
+  box-shadow: 6px 6px 0px var(--shadow-black);
+  border: 2px solid var(--shadow-black);
+}
+
+.retro-btn-secondary {
+  background: var(--electric-blue);
+  color: white;
+  box-shadow: 6px 6px 0px var(--shadow-black);
+  border: 2px solid var(--shadow-black);
+}
+
+.retro-btn-outline {
+  background: transparent;
+  color: var(--shadow-black);
+  box-shadow: 6px 6px 0px var(--shadow-black);
+  border: 2px solid var(--shadow-black);
+}
+
+/* Input Styles */
+.retro-input {
+  background: var(--bg-card);
+  border: 2px solid var(--shadow-black);
+  box-shadow: 4px 4px 0px var(--shadow-black);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.15s ease;
+}
+
+.retro-input:focus {
+  outline: none;
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px var(--shadow-black);
+}
+
+/* Grid System */
+.retro-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.retro-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.retro-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.retro-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+  .retro-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .retro-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .retro-grid-4,
+  .retro-grid-3,
+  .retro-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* Smaller shadows on mobile */
+  .retro-3d {
+    box-shadow: 4px 4px 0px var(--shadow-black);
+  }
+
+  .retro-3d-interactive:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0px var(--shadow-black);
+  }
+}
+
+/* Utility Classes */
+.retro-rounded {
+  border-radius: 12px;
+}
+
+.retro-rounded-lg {
+  border-radius: 16px;
+}
+
+.retro-rounded-xl {
+  border-radius: 20px;
+}
+
+/* Retro Marquee Styling */
+.retro-marquee-container {
+  /* Override the infinite marquee styles with retro 3D styling */
+}
+
+.retro-marquee-container .scroller {
+  /* Custom styling for the marquee container */
+}
+
+.retro-marquee-container li {
+  /* Individual marquee items styling */
+  background: var(--bg-card) !important;
+  border: 2px solid var(--shadow-black) !important;
+  box-shadow: 6px 6px 0px var(--shadow-black) !important;
+  border-radius: 12px !important;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.retro-marquee-container li:hover {
+  transform: translate(-2px, -2px) !important;
+  box-shadow: 8px 8px 0px var(--shadow-black) !important;
+}
+
+.retro-marquee-container h3 {
+  /* Retro styling for marquee card titles */
+  color: var(--shadow-black) !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  font-size: 1.125rem !important;
+  text-shadow: none !important;
+}
