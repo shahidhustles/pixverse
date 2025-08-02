@@ -2,7 +2,7 @@
 
 **🌐 Live Demo: [https://pixverse.vercel.app/](https://pixverse.vercel.app/)**
 
-A retro-style gaming website built for the **Pixverse Webathon** challenge, featuring interactive components and engaging gaming elements. This project showcases modern web development techniques while maintaining a nostalgic retro aesthetic that appeals to gaming enthusiasts.
+A retro-style gaming website built for the **Pixxelhack Webathon** challenge, featuring interactive components and engaging gaming elements. This project showcases modern web development techniques while maintaining a nostalgic retro aesthetic that appeals to gaming enthusiasts.
 
 ## 🌐 About the Website
 
@@ -12,7 +12,7 @@ The site includes various gaming sections, team showcases, and interactive eleme
 
 ## 🎯 Webathon Challenge Components
 
-As part of the Pixverse Webathon, I was tasked with implementing three specific elements and adding a mystery element:
+As part of the Pixxelhack Webathon, I was tasked with implementing three specific elements and adding a mystery element:
 
 ### ✅ Required Elements (Cloned):
 
@@ -155,12 +155,12 @@ Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## 📝 License
 
-This project is created for the Pixverse Webathon challenge.
+This project is created for the Pixxelhack Webathon challenge.
 
 ## 🤝 Contributing
 
-This project was developed as part of the Pixverse Webathon. Feel free to explore the code and learn from the implementations!
+This project was developed as part of the Pixxelhack Webathon. Feel free to explore the code and learn from the implementations!
 
 ---
 
-**Built with ❤️ for the Pixverse Webathon by [Shahid Patel](https://github.com/shahidhustles)**
+**Built with ❤️ for the Pixxelhack Webathon by [Shahid Patel](https://github.com/shahidhustles)**
