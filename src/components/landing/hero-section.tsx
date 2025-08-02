@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import { RetroCard } from "../ui/retro-card";
 import { RetroButton } from "../ui/retro-button";
 import { GamingIcon, GameStats } from "../ui/gaming-icons";
+import { ShootingGame } from "../../elements/interactive-target/shooting-game";
 
 export const HeroSection = () => {
   return (
@@ -75,36 +78,19 @@ export const HeroSection = () => {
             </div>
           </div>
 
-          {/* Gaming Component Placeholder */}
+          {/* Interactive Gaming Target */}
           <div className="flex justify-center">
             <RetroCard
-              className="w-full max-w-lg aspect-square p-12"
+              className="w-full max-w-lg aspect-square p-8"
               variant="orange"
             >
-              <div className="h-full flex flex-col items-center justify-center text-center">
-                <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mb-6">
-                  <GamingIcon
-                    icon="Crosshair"
-                    className="text-orange-400"
-                    size="xl"
-                  />
-                </div>
-
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">
-                  Gaming Component
-                </h3>
-
-                <p className="text-gray-600 mb-6">
-                  This space is reserved for your custom gaming component. Add
-                  3D models, character selection, weapon showcase, or any
-                  interactive gaming element here.
-                </p>
-
-                <div className="w-full h-32 bg-gray-100 rounded-lg border-2 border-dashed border-gray-400 flex items-center justify-center">
-                  <span className="text-gray-500 font-medium">
-                    Custom Component Placeholder
-                  </span>
-                </div>
+              <div className="h-full flex items-center justify-center">
+                <ShootingGame
+                  className="w-full h-full"
+                  onKill={(score) => {
+                    console.log("Target eliminated! Score:", score);
+                  }}
+                />
               </div>
             </RetroCard>
           </div>
