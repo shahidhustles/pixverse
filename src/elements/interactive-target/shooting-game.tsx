@@ -260,14 +260,14 @@ export const ShootingGame: React.FC<ShootingGameProps> = ({
       />
 
       {/* Score display */}
-      <div className="absolute top-4 left-4 z-40">
+      <div className="absolute top-4 left-4 z-30">
         <div className="bg-black bg-opacity-50 text-green-400 px-4 py-2 rounded-lg font-bold text-lg">
           SCORE: {score}
         </div>
       </div>
 
       {/* Game state indicator */}
-      <div className="absolute top-4 right-4 z-40">
+      <div className="absolute top-4 right-4 z-20">
         <div
           className={`px-3 py-1 rounded-full text-xs font-semibold ${
             gameState === "active"

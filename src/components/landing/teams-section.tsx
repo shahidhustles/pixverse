@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { RetroCard } from "../ui/retro-card";
 
 export const TeamsSection = () => {
@@ -10,37 +11,37 @@ export const TeamsSection = () => {
   const teamMembers = [
     {
       id: 1,
-      name: "TenZ",
+      name: "Zekken",
       designation: "Duelist",
-      image: "/sentinels-tenz.jpg",
+      image: "/zekken.jpg",
       color: "red" as const,
     },
     {
       id: 2,
-      name: "SicK",
+      name: "Bang",
       designation: "Flex",
-      image: "/sentinels-sick.jpg",
+      image: "/bang.jpeg",
       color: "blue" as const,
     },
     {
       id: 3,
-      name: "dapr",
+      name: "Zellsis",
       designation: "Sentinel",
-      image: "/sentinels-dapr.jpg",
+      image: "/zellsis.jpg",
       color: "green" as const,
     },
     {
       id: 4,
-      name: "ShahZaM",
+      name: "JOHNQT",
       designation: "IGL",
-      image: "/sentinels-shahzam.jpg",
+      image: "/johnqt.jpg",
       color: "purple" as const,
     },
     {
       id: 5,
-      name: "zombs",
+      name: "N4RRATE",
       designation: "Controller",
-      image: "/sentinels-zombs.jpg",
+      image: "/n4rrate.jpeg",
       color: "orange" as const,
     },
   ];
@@ -88,14 +89,13 @@ export const TeamsSection = () => {
                     <div className="relative">
                       {/* Circular Image Container */}
                       <div className="w-56 h-56 rounded-full overflow-hidden border-4 border-black shadow-2xl animate-fade-in">
-                        <div className="w-full h-full bg-gradient-to-br from-gray-400 to-gray-700 flex items-center justify-center">
-                          {/* Placeholder - Replace with actual image */}
-                          <div className="w-full h-full bg-gray-600 rounded-full flex items-center justify-center">
-                            <span className="text-white font-bold text-3xl">
-                              {member.name.charAt(0)}
-                            </span>
-                          </div>
-                        </div>
+                        <Image
+                          src={member.image}
+                          alt={member.name}
+                          width={224}
+                          height={224}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
 
                       {/* Optional: Add a subtle glow effect */}

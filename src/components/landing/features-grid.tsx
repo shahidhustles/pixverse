@@ -6,27 +6,33 @@ export const FeaturesGrid = () => {
   // Game features data for the infinite marquee
   const gameFeatures = [
     {
-      image: "/collection-1.jpg",
+      image:
+        "https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=400&h=300&fit=crop",
       title: "Tactical Weapons",
     },
     {
-      image: "/collection-2.jpg",
+      image:
+        "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop",
       title: "Competitive Modes",
     },
     {
-      image: "/collection-3.jpg",
+      image:
+        "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=300&fit=crop",
       title: "Agent Abilities",
     },
     {
-      image: "/collection-4.jpg",
+      image:
+        "https://images.unsplash.com/photo-1556438064-2d7646166914?w=400&h=300&fit=crop",
       title: "Dynamic Maps",
     },
     {
-      image: "/collection-5.jpg",
+      image:
+        "https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=400&h=300&fit=crop",
       title: "Esports Ready",
     },
     {
-      image: "/collection-6.jpg",
+      image:
+        "https://images.unsplash.com/photo-1560253023-3ec5d502959f?w=400&h=300&fit=crop",
       title: "Team Strategy",
     },
   ];
@@ -88,9 +94,7 @@ export const FeaturesGrid = () => {
             <div className="text-3xl font-black text-white mb-2 retro-text-3d">
               20+
             </div>
-            <div className="text-sm font-medium text-black">
-              Unique Agents
-            </div>
+            <div className="text-sm font-medium text-black">Unique Agents</div>
           </RetroCard>
 
           <RetroCard className="p-6 text-center" variant="purple" interactive>
