@@ -60,10 +60,7 @@ export const FeaturesGrid = () => {
         </div>
 
         {/* Retro 3D Container for Infinite Marquee */}
-        <RetroCard
-          className="overflow-hidden p-8 mb-12"
-          variant="purple"
-        >
+        <RetroCard className="overflow-hidden p-8 mb-12" variant="purple">
           <div className="retro-marquee-container">
             <InfiniteMovingCards items={gameFeatures} />
           </div>

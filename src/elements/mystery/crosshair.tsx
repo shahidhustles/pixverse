@@ -82,8 +82,10 @@ const Crosshair: React.FC<CrosshairProps> = ({
     );
 
     const onMouseMove = () => {
-      renderedStyles.tx.previous = renderedStyles.tx.current = mouseRef.current.x;
-      renderedStyles.ty.previous = renderedStyles.ty.current = mouseRef.current.y;
+      renderedStyles.tx.previous = renderedStyles.tx.current =
+        mouseRef.current.x;
+      renderedStyles.ty.previous = renderedStyles.ty.current =
+        mouseRef.current.y;
 
       gsap.to(
         [lineHorizontalRef.current, lineVerticalRef.current].filter(Boolean),
