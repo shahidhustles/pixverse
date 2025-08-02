@@ -63,7 +63,6 @@ export const FeaturesGrid = () => {
         <RetroCard
           className="overflow-hidden p-8 mb-12"
           variant="purple"
-          size="lg"
         >
           <div className="retro-marquee-container">
             <InfiniteMovingCards items={gameFeatures} />

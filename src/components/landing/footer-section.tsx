@@ -117,7 +117,6 @@ export const FooterSection = () => {
                   className="p-3 cursor-pointer"
                   variant={platform.color}
                   interactive
-                  size="sm"
                 >
                   <span className="text-sm font-bold text-gray-800">
                     {platform.name}
