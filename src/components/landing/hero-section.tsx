@@ -5,7 +5,7 @@ import { GamingIcon, GameStats } from "../ui/gaming-icons";
 
 export const HeroSection = () => {
   return (
-    <section className="min-h-screen gaming-bg-primary text-white py-20">
+    <section className="min-h-screen bg-white text-black py-20">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Hero Content */}
@@ -24,12 +24,12 @@ export const HeroSection = () => {
                 </div>
 
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
-                  <span className="retro-text-3d text-white">DOMINATE</span>
+                  <span className="retro-text-3d text-black">DOMINATE</span>
                   <br />
                   <span className="retro-text-gaming">THE RIFT</span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-lg">
+                <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-lg">
                   Experience the ultimate tactical FPS shooter. Master your aim,
                   coordinate with your team, and rise through the competitive
                   ranks in this Valorant-style gaming experience.
@@ -82,7 +82,7 @@ export const HeroSection = () => {
               variant="orange"
             >
               <div className="h-full flex flex-col items-center justify-center text-center">
-                <div className="w-24 h-24 gaming-bg-secondary rounded-full flex items-center justify-center mb-6">
+                <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mb-6">
                   <GamingIcon
                     icon="Crosshair"
                     className="text-orange-400"
@@ -100,7 +100,7 @@ export const HeroSection = () => {
                   interactive gaming element here.
                 </p>
 
-                <div className="w-full h-32 gaming-bg-secondary rounded-lg border-2 border-dashed border-gray-400 flex items-center justify-center">
+                <div className="w-full h-32 bg-gray-100 rounded-lg border-2 border-dashed border-gray-400 flex items-center justify-center">
                   <span className="text-gray-500 font-medium">
                     Custom Component Placeholder
                   </span>
@@ -112,13 +112,13 @@ export const HeroSection = () => {
       </div>
 
       {/* Floating Gaming Elements */}
-      <div className="absolute top-20 right-20 hidden xl:block">
+      <div className="absolute top-32 right-10 hidden xl:block">
         <RetroCard className="p-4" variant="yellow" interactive>
           <GamingIcon icon="Star" className="text-yellow-600" />
         </RetroCard>
       </div>
 
-      <div className="absolute bottom-32 left-20 hidden xl:block">
+      <div className="absolute bottom-20 left-8 hidden xl:block">
         <RetroCard className="p-4" variant="green" interactive>
           <GamingIcon icon="Shield" className="text-green-500" />
         </RetroCard>

@@ -7,7 +7,7 @@ export const FooterSection = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-16 gaming-bg-secondary">
+    <footer className="py-16 bg-gray-50">
       <div className="container mx-auto px-6">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-12">
@@ -43,7 +43,7 @@ export const FooterSection = () => {
           {/* Quick Links */}
           <div>
             <RetroCard className="p-6 h-full" variant="blue">
-              <h4 className="text-lg font-bold text-gray-800 mb-4 retro-text-3d">
+              <h4 className="text-lg font-black text-gray-800 mb-4 uppercase tracking-wider">
                 GAME
               </h4>
               <ul className="space-y-3">
@@ -69,7 +69,7 @@ export const FooterSection = () => {
           {/* Community */}
           <div>
             <RetroCard className="p-6 h-full" variant="green">
-              <h4 className="text-lg font-bold text-gray-800 mb-4 retro-text-3d">
+              <h4 className="text-lg font-black text-gray-800 mb-4 uppercase tracking-wider">
                 COMMUNITY
               </h4>
               <ul className="space-y-3">
@@ -97,7 +97,7 @@ export const FooterSection = () => {
         <RetroCard className="p-6 mb-8" variant="purple">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-4 md:mb-0">
-              <h4 className="text-xl font-bold text-gray-800 mb-2 retro-text-3d">
+              <h4 className="text-xl font-black text-gray-800 mb-2 uppercase tracking-wider">
                 STAY CONNECTED
               </h4>
               <p className="text-gray-600">
@@ -136,7 +136,7 @@ export const FooterSection = () => {
               className="text-orange-600 mx-auto mb-4"
               size="xl"
             />
-            <h4 className="text-2xl font-black text-gray-800 mb-2 retro-text-3d">
+            <h4 className="text-2xl font-black text-gray-800 mb-2 uppercase tracking-wider">
               JOIN THE ELITE
             </h4>
             <p className="text-gray-600 mb-6">

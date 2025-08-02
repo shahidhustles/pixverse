@@ -1,191 +1,173 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { RetroCard } from "../ui/retro-card";
-import { GamingIcon, GamingBadge } from "../ui/gaming-icons";
 
 export const TeamsSection = () => {
-  // Placeholder team data
-  const placeholderTeams = [
+  const [hoveredMember, setHoveredMember] = useState<number | null>(null);
+
+  // Sentinels Valorant Team Members
+  const teamMembers = [
     {
       id: 1,
-      name: "Phoenix Squad",
-      role: "Duelist Team",
-      status: "active",
+      name: "TenZ",
+      designation: "Duelist",
+      image: "/sentinels-tenz.jpg",
       color: "red" as const,
     },
     {
       id: 2,
-      name: "Cypher Unit",
-      role: "Intel Team",
-      status: "active",
+      name: "SicK",
+      designation: "Flex",
+      image: "/sentinels-sick.jpg",
       color: "blue" as const,
     },
     {
       id: 3,
-      name: "Sage Force",
-      role: "Support Team",
-      status: "recruiting",
+      name: "dapr",
+      designation: "Sentinel",
+      image: "/sentinels-dapr.jpg",
       color: "green" as const,
     },
     {
       id: 4,
-      name: "Viper Command",
-      role: "Controller Team",
-      status: "active",
+      name: "ShahZaM",
+      designation: "IGL",
+      image: "/sentinels-shahzam.jpg",
       color: "purple" as const,
+    },
+    {
+      id: 5,
+      name: "zombs",
+      designation: "Controller",
+      image: "/sentinels-zombs.jpg",
+      color: "orange" as const,
     },
   ];
 
   return (
-    <section className="py-20 gaming-bg-primary">
+    <section className="py-20 bg-white relative overflow-hidden">
       <div className="container mx-auto px-6">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <RetroCard className="inline-block px-8 py-3 mb-6" variant="orange">
-            <span className="font-bold uppercase tracking-wider text-sm">
-              ELITE SQUADS
-            </span>
-          </RetroCard>
-
-          <h2 className="text-3xl md:text-5xl font-black text-white mb-6">
-            <span className="retro-text-3d">JOIN THE</span>{" "}
-            <span className="retro-text-gaming">LEGENDS</span>
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-6xl font-black text-black mb-8">
+            <span className="retro-text-3d">OUR TEAM</span>
           </h2>
-
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Team up with skilled players or build your own squad. Each team
-            brings unique strategies and coordination to dominate the
-            competitive scene.
-          </p>
         </div>
 
-        {/* Teams Grid - Placeholder Cards */}
-        <div className="retro-grid retro-grid-4 mb-12">
-          {placeholderTeams.map((team) => (
-            <RetroCard
-              key={team.id}
-              className="p-6 text-center"
-              variant={team.color}
-              interactive
+        {/* Team Members List */}
+        <div className="max-w-5xl mx-auto space-y-1">
+          {teamMembers.map((member) => (
+            <div
+              key={member.id}
+              className="relative"
+              onMouseEnter={() => setHoveredMember(member.id)}
+              onMouseLeave={() => setHoveredMember(null)}
             >
-              {/* Team Icon */}
-              <div className="mb-4">
-                <RetroCard
-                  className="w-16 h-16 mx-auto flex items-center justify-center gaming-bg-secondary"
-                  variant="black"
-                >
-                  <GamingIcon icon="Shield" className="text-white" size="lg" />
-                </RetroCard>
+              {/* Full Width Row */}
+              <div className="w-full bg-white border-b-2 border-black py-6 px-8 cursor-pointer transition-all duration-300 hover:bg-gray-100">
+                <div className="flex items-center justify-between">
+                  {/* Left Side - Name */}
+                  <div className="flex-1">
+                    <h3 className="text-3xl md:text-4xl font-bold text-black">
+                      {String(member.id).padStart(2, "0")} {member.name}
+                    </h3>
+                  </div>
+
+                  {/* Right Side - Role */}
+                  <div className="text-right">
+                    <span className="text-lg md:text-xl font-bold text-black uppercase tracking-wider">
+                      {member.designation}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Circular Profile Image - Appears on Hover */}
+                {hoveredMember === member.id && (
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                    <div className="relative">
+                      {/* Circular Image Container */}
+                      <div className="w-56 h-56 rounded-full overflow-hidden border-4 border-black shadow-2xl animate-fade-in">
+                        <div className="w-full h-full bg-gradient-to-br from-gray-400 to-gray-700 flex items-center justify-center">
+                          {/* Placeholder - Replace with actual image */}
+                          <div className="w-full h-full bg-gray-600 rounded-full flex items-center justify-center">
+                            <span className="text-white font-bold text-3xl">
+                              {member.name.charAt(0)}
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Optional: Add a subtle glow effect */}
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/30 to-purple-500/30 blur-lg -z-10"></div>
+                    </div>
+                  </div>
+                )}
               </div>
-
-              {/* Team Info */}
-              <h3 className="text-xl font-bold text-gray-800 mb-2">
-                {team.name}
-              </h3>
-              <p className="text-sm text-gray-600 mb-3">{team.role}</p>
-
-              {/* Status Badge */}
-              <GamingBadge
-                variant={team.status === "recruiting" ? "orange" : "green"}
-              >
-                {team.status === "recruiting" ? "RECRUITING" : "ACTIVE"}
-              </GamingBadge>
-            </RetroCard>
+            </div>
           ))}
         </div>
 
-        {/* Main Placeholder Notice */}
-        <RetroCard
-          className="p-12 text-center gaming-bg-secondary"
-          variant="yellow"
-        >
-          <div className="max-w-3xl mx-auto">
-            <div className="w-24 h-24 gaming-bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-              <GamingIcon icon="Target" className="text-yellow-400" size="xl" />
+        {/* Team Stats Section */}
+        <div className="mt-20">
+          <RetroCard className="p-12 text-center bg-gray-50" variant="yellow">
+            <div className="max-w-4xl mx-auto">
+              <h3 className="text-3xl font-black text-gray-700 mb-8 retro-text-3d">
+                MEET THE WORLD CHAMPIONS
+              </h3>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div className="text-center">
+                  <div className="text-4xl font-black retro-text-gaming mb-2">
+                    #1
+                  </div>
+                  <p className="text-gray-600 font-semibold">Global Ranking</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-black retro-text-gaming mb-2">
+                    5
+                  </div>
+                  <p className="text-gray-600 font-semibold">Major Titles</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-black retro-text-gaming mb-2">
+                    87%
+                  </div>
+                  <p className="text-gray-600 font-semibold">Win Rate</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl font-black retro-text-gaming mb-2">
+                    2M+
+                  </div>
+                  <p className="text-gray-600 font-semibold">Prize Money</p>
+                </div>
+              </div>
+
+              <p className="text-gray-600 text-lg font-medium">
+                The most dominant roster in Valorant history, setting records
+                and defining the meta across multiple competitive seasons.
+              </p>
             </div>
-
-            <h3 className="text-3xl font-black text-white mb-4 retro-text-3d">
-              TEAMS COMPONENT PLACEHOLDER
-            </h3>
-
-            <p className="text-gray-300 text-lg mb-8">
-              This section is reserved for your custom teams component. Replace
-              this placeholder with your team management system, member
-              profiles, recruitment features, and squad statistics.
-            </p>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              <div className="text-center">
-                <GamingIcon
-                  icon="Trophy"
-                  className="text-yellow-400 mx-auto mb-2"
-                />
-                <span className="text-sm text-gray-300">Team Profiles</span>
-              </div>
-              <div className="text-center">
-                <GamingIcon
-                  icon="Target"
-                  className="text-yellow-400 mx-auto mb-2"
-                />
-                <span className="text-sm text-gray-300">Member Management</span>
-              </div>
-              <div className="text-center">
-                <GamingIcon
-                  icon="Lightning"
-                  className="text-yellow-400 mx-auto mb-2"
-                />
-                <span className="text-sm text-gray-300">
-                  Recruitment System
-                </span>
-              </div>
-              <div className="text-center">
-                <GamingIcon
-                  icon="Star"
-                  className="text-yellow-400 mx-auto mb-2"
-                />
-                <span className="text-sm text-gray-300">Team Statistics</span>
-              </div>
-            </div>
-
-            <div className="w-full h-48 gaming-bg-primary rounded-lg border-4 border-dashed border-yellow-400 flex items-center justify-center">
-              <div className="text-center">
-                <GamingIcon
-                  icon="Crosshair"
-                  className="text-yellow-400 mx-auto mb-2"
-                  size="xl"
-                />
-                <span className="text-yellow-400 font-bold text-lg">
-                  Your Custom Teams Component Goes Here
-                </span>
-              </div>
-            </div>
-          </div>
-        </RetroCard>
-
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center mt-12">
-          <RetroCard
-            className="px-8 py-4 text-center cursor-pointer"
-            variant="red"
-            interactive
-          >
-            <span className="font-bold text-gray-800">CREATE YOUR SQUAD</span>
-          </RetroCard>
-          <RetroCard
-            className="px-8 py-4 text-center cursor-pointer"
-            variant="blue"
-            interactive
-          >
-            <span className="font-bold text-gray-800">JOIN EXISTING TEAM</span>
-          </RetroCard>
-          <RetroCard
-            className="px-8 py-4 text-center cursor-pointer"
-            variant="green"
-            interactive
-          >
-            <span className="font-bold text-gray-800">VIEW LEADERBOARDS</span>
           </RetroCard>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.8);
+          }
+          to {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+          }
+        }
+
+        .animate-fade-in {
+          animation: fade-in 0.3s ease-out forwards;
+        }
+      `}</style>
     </section>
   );
 };

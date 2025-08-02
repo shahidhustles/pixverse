@@ -32,7 +32,7 @@ export const FeaturesGrid = () => {
   ];
 
   return (
-    <section className="py-20 gaming-bg-secondary">
+    <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -42,12 +42,12 @@ export const FeaturesGrid = () => {
             </span>
           </RetroCard>
 
-          <h2 className="text-3xl md:text-5xl font-black text-white mb-6">
+          <h2 className="text-3xl md:text-5xl font-black text-black mb-6">
             <span className="retro-text-3d">TACTICAL</span>{" "}
             <span className="retro-text-gaming">GAMEPLAY</span>
           </h2>
 
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
             Experience cutting-edge FPS gameplay with tactical depth,
             competitive integrity, and endless strategic possibilities.
           </p>
@@ -70,7 +70,7 @@ export const FeaturesGrid = () => {
             <div className="text-3xl font-black text-white mb-2 retro-text-3d">
               150+
             </div>
-            <div className="text-sm font-medium text-gray-300">
+            <div className="text-sm font-medium text-black">
               Weapons & Items
             </div>
           </RetroCard>
@@ -79,7 +79,7 @@ export const FeaturesGrid = () => {
             <div className="text-3xl font-black text-white mb-2 retro-text-3d">
               15
             </div>
-            <div className="text-sm font-medium text-gray-300">
+            <div className="text-sm font-medium text-black">
               Competitive Maps
             </div>
           </RetroCard>
@@ -88,7 +88,7 @@ export const FeaturesGrid = () => {
             <div className="text-3xl font-black text-white mb-2 retro-text-3d">
               20+
             </div>
-            <div className="text-sm font-medium text-gray-300">
+            <div className="text-sm font-medium text-black">
               Unique Agents
             </div>
           </RetroCard>
@@ -97,7 +97,7 @@ export const FeaturesGrid = () => {
             <div className="text-3xl font-black text-white mb-2 retro-text-3d">
               ∞
             </div>
-            <div className="text-sm font-medium text-gray-300">
+            <div className="text-sm font-medium text-black">
               Tactical Combinations
             </div>
           </RetroCard>

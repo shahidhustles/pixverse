@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import SplashCursor from "../elements/ripple-effect/cursor-splur";
+import Crosshair from "../elements/mystery/crosshair";
+import HamburgerMenu from "../components/ui/hamburger-menu";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,7 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <HamburgerMenu />
         {/* <SplashCursor /> */}
+        <Crosshair color="#ff4655" />
+
         {children}
       </body>
     </html>

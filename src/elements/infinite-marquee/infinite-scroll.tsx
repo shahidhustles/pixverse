@@ -69,20 +69,20 @@ export const InfiniteMovingCards = ({
         {items.map((item, index) => (
           <React.Fragment key={index}>
             <li
-              className="relative w-[250px] max-w-full shrink-0 md:w-[280px]"
+              className="relative w-[250px] max-w-full shrink-0 md:w-[280px] rounded-xl overflow-hidden"
               style={{ backgroundColor: "#181c19" }}
             >
               <div className="flex flex-col items-center">
-                <div className="relative w-full h-64 overflow-hidden group bg-black">
+                <div className="relative w-full h-64 overflow-hidden group bg-black rounded-t-xl">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="object-cover transition-transform duration-300 group-hover:scale-110 rounded-t-xl"
                   />
                 </div>
-                <div className="w-full">
-                  <h3 className="text-lg font-semibold mt-5  text-white">
+                <div className="w-full p-4">
+                  <h3 className="text-lg font-semibold text-white">
                     {item.title}
                   </h3>
                 </div>
